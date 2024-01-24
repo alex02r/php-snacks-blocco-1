@@ -30,13 +30,30 @@
             ]
         ];
     ?>
-    <h1>Partite di Basket</h1>
-    <?php
-        foreach( $matchs as $match){ 
-            ?> 
-                <p> <?php echo $match['casa']; ?> - <?php echo $match['ospite']; ?> | <?php echo $match['punti_casa']; ?>-<?php echo $match['punti_ospite']; ?> </p> 
-            <?php
-        }
-    ?>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h1>Partite di Basket</h1>
+            </div>
+            <div class="col-6">
+                <?php
+                    foreach( $matchs as $match){ 
+                ?> 
+                <div class="card text-center my-4">
+                    <div class="card-header">
+                        Match
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $match['casa']; ?> - <?php echo $match['ospite']; ?></h5>
+                    </div>
+                    <div class="card-footer text-body-secondary">
+                    <?php echo $match['punti_casa']; ?>-<?php echo $match['punti_ospite']; ?>
+                    </div>
+                </div>
+                <?php } ?>
+            </div>
+        </div>
+    </div>
+    
 </body>
 </html>
