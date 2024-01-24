@@ -54,19 +54,27 @@
                 <h1>SOCIAL</h1>
             </div>
         </div>
-    </div>
-    <?php 
+        <?php 
         foreach($posts as $index => $day){
         ?>
-            <h3><?php echo $index; ?></h3>
+        <div class="row">
+            <div class="col-12">
+                <h3><?php echo $index; ?></h3>
+            </div>
             <?php foreach($day as $post){ ?>
-                <p> 
-                    <?php echo $post['author']; ?> </br>
-                    post:<?php echo $post['title']; ?> <br> 
-                    descrizione: <?php echo $post['text']; ?>
-                </p> 
-            <?php }
-        }
-        ?>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"> <?php echo $post['title']; ?> </h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary"> <?php echo $post['author']; ?> </h6>
+                            <p class="card-text"> <?php echo $post['text']; ?> </p>
+                        </div>
+                    </div>
+                </div> 
+            <?php } ?>
+        </div>
+       <?php } ?>
+    </div>
+    
 </body>
 </html>
