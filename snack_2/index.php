@@ -8,11 +8,13 @@
 <body>
     <?php 
         if (isset($_GET['name']) && isset($_GET['mail']) && isset($_GET['age'])) {
-            //controllo per il name
+            //controllo per il name email e age
             if (strlen($_GET['name']) - 1 > 3 && str_contains($_GET['mail'], '.') && str_contains($_GET['mail'], '@')  && is_numeric($_GET['age'])) {
                 //accesso riuscito
+                $value = 'accesso riuscito';
             }else{
                 //accesso negato
+                $value = 'accesso neagto';
             }
         }
     ?>
@@ -28,5 +30,8 @@
 
         <button type="submit">Verifica</button>
     </form>
+    <?php if (isset($value)) {
+        echo $value;
+    } ?>
 </body>
 </html>
