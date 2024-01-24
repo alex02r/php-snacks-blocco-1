@@ -48,7 +48,13 @@
             ]
         ];
     ?>
-    <h1>SOCIAL</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>SOCIAL</h1>
+            </div>
+        </div>
+    </div>
     <?php 
         foreach($posts as $index => $day){
         ?>
