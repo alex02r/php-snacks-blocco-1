@@ -7,7 +7,14 @@
 </head>
 <body>
     <?php 
-    
+        if (isset($_GET['name']) && isset($_GET['mail']) && isset($_GET['age'])) {
+            //controllo per il name
+            if (strlen($_GET['name']) - 1 > 3) {
+                //accesso riuscito
+            }else{
+                //accesso negato
+            }
+        }
     ?>
     <form action="index.php" method="GET">
         <label for="nome">Nome</label>
