@@ -46,6 +46,13 @@
             ]
         ];
     ?>
-
+    <h1>SOCIAL</h1>
+    <?php 
+        foreach($posts as $index => $day){
+        ?>
+            <h3><?php echo $index; ?></h3>
+        <?php
+        }
+    ?>
 </body>
 </html>
