@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php 
-        $match = [
+        $matchs = [
             [
                 'casa' => 'Milano',
                 'ospite' => 'Treviso',
@@ -27,6 +27,14 @@
                 'punti_ospite' => 104 
             ]
         ];
+    ?>
+    <h1>Partite di Basket</h1>
+    <?php
+        foreach( $matchs as $match){ 
+            ?> 
+                <p> <?php echo $match['casa']; ?> - <?php echo $match['ospite']; ?> | <?php echo $match['punti_casa']; ?>-<?php echo $match['punti_ospite']; ?> </p> 
+            <?php
+        }
     ?>
 </body>
 </html>
