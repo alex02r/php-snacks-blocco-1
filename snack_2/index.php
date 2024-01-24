@@ -20,20 +20,37 @@
             }
         }
     ?>
-    <form action="index.php" method="GET">
-        <label for="nome">Nome</label>
-        <input type="text" id="nome" name="name">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h1>Login</h1>
+            </div>
+            <div class="col-6">
+                <form action="index.php" method="GET">
+                    <div class="mb-3">
+                        <label class="form-label" for="nome">Nome</label>
+                        <input class="form-control" type="text" id="nome" name="name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="email">Email</label>
+                        <input class="form-control" type="mail" id="email" name="mail">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="eta">Età</label>
+                        <input class="form-control" type="text" id="eta" name="age">
+                    </div>
 
-        <label for="email">Email</label>
-        <input type="mail" id="email" name="mail">
-
-        <label for="eta">Età</label>
-        <input type="text" id="eta" name="age">
-
-        <button type="submit">Verifica</button>
-    </form>
-    <?php if (isset($value)) {
-        echo $value;
-    } ?>
+                    <button class="btn btn-success" type="submit">Verifica</button>
+                </form>
+                <?php if (isset($value)) {
+                        if($value == 'accesso riuscito'){
+                        ?> <h5 class="text-success"> <?php echo $value; ?> </h5> <?php
+                        }else{
+                        ?> <h5 class="text-danger"> <?php echo $value; ?> </h5> <?php
+                        }
+                } ?>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
