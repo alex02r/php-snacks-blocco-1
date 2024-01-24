@@ -10,36 +10,36 @@
         $posts = [
             '21-01-2024' =>[
                 [
-                    'tile' => 'nome',
+                    'title' => 'nome',
                     'author' => 'giorgio',
                     'text' => 'ciao'
                 ],
                 [
-                    'tile' => 'aaaa',
+                    'title' => 'aaaa',
                     'author' => 'giorgio',
                     'text' => 'micio'
                 ]
             ],
             '22-01-2024' =>[
                 [
-                    'tile' => 'bimbo',
+                    'title' => 'bimbo',
                     'author' => 'pippo',
                     'text' => 'neonato'
                 ]
             ],
             '23-01-2024' =>[
                 [
-                    'tile' => 'gatto1',
+                    'title' => 'gatto1',
                     'author' => 'IloveMici',
                     'text' => 'micino'
                 ],
                 [
-                    'tile' => 'gatto2',
+                    'title' => 'gatto2',
                     'author' => 'IloveMici',
                     'text' => 'micino 2'
                 ],
                 [
-                    'tile' => 'gatto3',
+                    'title' => 'gatto3',
                     'author' => 'IloveMici',
                     'text' => 'micino 3'
                 ]
@@ -51,8 +51,14 @@
         foreach($posts as $index => $day){
         ?>
             <h3><?php echo $index; ?></h3>
-        <?php
+            <?php foreach($day as $post){ ?>
+                <p> 
+                    <?php echo $post['author']; ?> </br>
+                    post:<?php echo $post['title']; ?> <br> 
+                    descrizione: <?php echo $post['text']; ?>
+                </p> 
+            <?php }
         }
-    ?>
+        ?>
 </body>
 </html>
